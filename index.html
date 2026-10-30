@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Poppins:wght@400;500;600&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="stars" aria-hidden="true"></div>
+
+    <div class="portfolio-container">
+
+        <!-- Navegación superior -->
+        <header class="topbar">
+            <span class="brand">Mi Portfolio</span>
+            <nav aria-label="Secciones del portfolio">
+                <ul class="nav-menu">
+                    <li><button class="nav-btn active" onclick="switchTab(event, 'info')">Sobre mí</button></li>
+                    <li><button class="nav-btn" onclick="switchTab(event, 'studies')">Perfil profesional</button></li>
+                    <li><button class="nav-btn" onclick="switchTab(event, 'tech')">Tech</button></li>
+                    <li><button class="nav-btn" onclick="switchTab(event, 'about')">Conóceme</button></li>
+                    <li><button class="nav-btn" onclick="switchTab(event, 'dreams')">Goals</button></li>
+                    <li><button class="nav-btn" onclick="switchTab(event, 'connect')">Contacto</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+
+            <!-- SOBRE MÍ (inicio) -->
+            <section id="info" class="tab-content active">
+                <div class="hero">
+                    <div class="photo-orbit">
+                        <div class="profile-pic">
+                            <img src="img/foto-perfil.png" alt="Foto de Miriam Zarza" onerror="this.remove()">
+                        </div>
+                    </div>
+
+                    <div class="hero-text">
+                        <h1 class="neon-text">Miriam <span class="surname">Zarza</span></h1>
+                        <p class="tagline">Resolviendo con un poco de magia y mucho código.</p>
+                        <p class="intro">
+                            Me encanta aprender cómo funcionan las cosas para después 
+                            crear proyectos, resolver problemas y explorar mi creatividad 
+                            a través de la programación y la tecnología.
+                        </p>
+                    </div>
+                </div>
+                    <div class="machine" aria-label="Generador de frases sobre mí">
+                        <div class="controls">
+                            <span class="machine-icon">✦</span>
+                            <h2>Descubre algo sobre mí</h2>
+                            <p>Pulsa el botón y deja que la ruleta elija una frase random.</p>
+                            <button id="spinButton" type="button">
+                                Girar frases ✨
+                            </button>
+                        </div>
+                    
+                        <div class="reel-panel">
+                            <div class="reel-heading">
+                                <span>✨ Un poquito de Miriam</span>
+                                <span id="spinStatus">Lista para girar</span>
+                            </div>
+                        
+                            <div class="reel">
+                                <p id="randomPhrase" aria-live="polite">
+                                    Gira!🎰
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- PERFIL PROFESIONAL -->
+            <section id="studies" class="tab-content">
+                <h2>Perfil profesional</h2>
+                <div class="roadmap-academico">
+                    <!-- Ítem 1 -->
+                    <div class="roadmap-academico-item">
+                        <div class="roadmap-academico-dot">2021 — <br> 2025</div>
+                        <div class="roadmap-academico-content">
+                            <h3>ESO</h3>
+                            <p>Educación Secundaria Obligatoria</p>
+                            <div class="roadmap-academico-icon">
+                                <span class="material-symbols-outlined mi-clase-ubicacion">location_on</span>
+                                <span>Colegio Sant Gabriel de Barcelona</span>
+                            </div>
+                        </div>
+                        <div class="roadmap-academico-status complete">Completado</div>
+                    </div>
+                
+                    <!-- Ítem 2 -->
+                    <div class="roadmap-academico-item">
+                        <div class="roadmap-academico-dot">2025 — <br> 2026</div>
+                        <div class="roadmap-academico-content">
+                            <h3>1ºSMR</h3>
+                            <p>Sistemas Microinformáticos y Redes</p>
+                            <div class="roadmap-academico-icon">
+                                <span class="material-symbols-outlined mi-clase-ubicacion">location_on</span>
+                                <span>Monlau Centre d'Estudis - La Sagrera</span>
+                            </div>
+                        </div>
+                        <div class="roadmap-academico-status complete">Completado</div>
+                    </div>
+
+                    <!-- Ítem 2 -->
+                    <div class="roadmap-academico-item">
+                        <div class="roadmap-academico-dot">2026 — <br> 2027</div>
+                        <div class="roadmap-academico-content">
+                            <h3>2ºSMR</h3>
+                            <p>Sistemas Microinformáticos y Redes</p>
+                            <div class="roadmap-academico-icon">
+                                <span class="material-symbols-outlined mi-clase-ubicacion">location_on</span>
+                                <span>Monlau Centre d'Estudis - La Sagrera</span>
+                            </div>
+                        </div>
+                        <div class="roadmap-academico-status process">En curso</div>
+                    </div>
+                </div>
+
+                <h2>Experiencia laboral</h2>
+                <div class="roadmap-laboral">
+                <!-- Ítem 1 -->
+                <div class="roadmap-laboral-item">
+                    <div class="roadmap-laboral-dot">2026</div>
+                    <div class="roadmap-laboral-content">
+                        <h3>CDEI - UPC</h3>
+                        <p>Centro de Diseño de Equipos Industriales</p>
+                        <div class="roadmap-laboral-icon">
+                            <span class="material-symbols-outlined mi-clase-ubicacion">location_on</span>
+                            <span>Universidad Politécnica de Cataluña</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-laboral-status process">En curso</div>
+                </div>
+                </div>
+
+                <h2>Idiomas</h2>
+                <div class="idiomas">
+                
+                    <!-- Catalán -->
+                    <div class="idiomas-item">
+                        <div class="idiomas-bandera" aria-label="Bandera de Cataluña">
+                            <img src="img/bandera-cataluña.jpg">
+                        </div>
+                        <h3>Catalán</h3>
+                        <span class="idiomas-nivel">C1</span>
+                        <p class="idiomas-descripcion">Avanzado</p>
+                    </div>
+                
+                    <!-- Castellano -->
+                    <div class="idiomas-item">
+                        <div class="idiomas-bandera" aria-label="Bandera de España">
+                            <img src="img/bandera-españa.jpg">
+                        </div>
+                        <h3>Castellano</h3>
+                        <span class="idiomas-nivel">Nativo</span>
+                        <p class="idiomas-descripcion">Lengua materna</p>
+                    </div>
+                
+                    <!-- Inglés -->
+                    <div class="idiomas-item">
+                        <div class="idiomas-bandera" aria-label="Bandera del Reino Unido">
+                            <img src="img/bandera-reino-unido.webp">
+                        </div>
+                        <h3>Inglés</h3>
+                        <span class="idiomas-nivel">A2</span>
+                        <p class="idiomas-descripcion">
+                            Certificado EOI
+                            <small>(Escuela Oficial de Idiomas)</small>
+                        </p>
+                    </div>
+                
+                </div>
+            </section>
+
+            <!-- TECH -->
+            <section id="tech" class="tab-content">
+                <!-- Lenguajes de programación -->
+                <h2>Lenguajes de programación</h2>
+                <!-- Item 1 -->
+                <div class="card-languages-container">
+                    <!-- Cerrada por defecto -->
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3>HTML & CSS</h3>
+                            <span class="languages-level">Avanzado</span>
+                            <button class="arrow-button"><span></span></button>
+                            <div class="level-barra" style="--porcentaje: 80%;"></div>
+                        </div>
+                        
+                        <!-- Este es el contenido que se va a desplegar -->
+                        <div class="card-body">
+                            <hr>
+                            <h4 class="certificados-title">CERTIFICADOS</h4>
+                            <div class="certificados-container">
+                                <div class="certificado">
+                                    <div class="certificado-info">
+                                        <h4>Introduction to HTML</h4>
+                                        <p>Sololearn</p>
+                                    </div>
+                                    <span class="certificado-ano">2024</span>
+                                    <a class="material-symbols-outlined certificado-enlace" href="https://www.sololearn.com/certificates/CC-SVBV67IJ" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de HTML" onclick="event.stopPropagation()">open_in_new</a>
+                                </div>
+                                <div class="certificado">
+                                    <div class="certificado-info">
+                                        <h4>Introduction to CSS</h4>
+                                        <p>Sololearn</p>
+                                    </div>
+                                    <span class="certificado-ano">2024</span>
+                                    <a class="material-symbols-outlined certificado-enlace" href="https://www.sololearn.com/certificates/CC-RV8E37J2" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de CSS" onclick="event.stopPropagation()">open_in_new</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="card-languages-container">
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3>JavaScript</h3>
+                            <span class="languages-level">Introductorio</span>
+                            <button class="arrow-button"><span></span></button>
+                            <div class="level-barra" style="--porcentaje: 40%;"></div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <hr>
+                            <h4 class="certificados-title">CERTIFICADOS</h4>
+                            <div class="certificados-container">
+                                <div class="certificado">
+                                    <div class="certificado-info">
+                                        <h4>Introduction to JavaScript</h4>
+                                        <p>Sololearn</p>
+                                    </div>
+                                    <span class="certificado-ano">2025</span>
+                                    <a class="material-symbols-outlined certificado-enlace" href="https://www.sololearn.com/certificates/CC-THIZKXSY" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de HTML" onclick="event.stopPropagation()">open_in_new</a>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="card-languages-container">
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3>Python</h3>
+                            <span class="languages-level">Avanzado</span>
+                            <button class="arrow-button"><span></span></button>
+                            <div class="level-barra" style="--porcentaje: 80%;"></div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <hr>
+                            <h4 class="certificados-title">CERTIFICADOS</h4>
+                            <div class="certificados-container">
+                                <div class="certificado">
+                                    <div class="certificado-info">
+                                        <h4>Introduction to Python</h4>
+                                        <p>Sololearn</p>
+                                    </div>
+                                    <span class="certificado-ano">2025</span>
+                                    <a class="material-symbols-outlined certificado-enlace" href="https://www.sololearn.com/certificates/CC-8MRTLUWY" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de HTML" onclick="event.stopPropagation()">open_in_new</a>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+               <div class="card-languages-container">
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3>SQL</h3>
+                            <span class="languages-level">Básico</span>
+                            <button class="arrow-button"><span></span></button>
+                            <div class="level-barra" style="--porcentaje: 20%;"></div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <hr>
+                            <h4 class="certificados-title">CERTIFICADOS</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <h2>Herramientas</h2>
+                <div class="tools-grid">
+                    <!-- Cerrada por defecto -->
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">devices</span>Sistemas operativos</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        
+                        <!-- Este es el contenido que se va a desplegar -->
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">desktop_windows</span>Windows 10 y 11</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">dns</span>Windows Server</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">computer</span>Ubuntu</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">terminal</span>Ubuntu Server</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">install_desktop</span>Instalación y configuración de sistemas operativos</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>Gestión de usuarios, permisos y archivos</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span>Máquinas virtuales (VMware)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">                                
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">hub</span>Redes</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">hub</span>Montaje y simulación de redes</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">router</span>Configuración básica de routers y switches</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">settings_ethernet</span>Direccionamiento IPv4, subredes, DHCP, ping, DNS y VLAN</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">lan</span>Protocolos básicos: TCP/IP, HTTP/HTTPS, FTP y SSH</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">memory</span>Hardware</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">computer</span>Componentes de un ordenador</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">build</span>Montaje y desmontaje de equipos</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">extension</span>Instalación de componentes</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">troubleshoot</span>Diagnóstico de averías</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">developer_board</span>Arduino: componentes electrónicos y programación básica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">description</span>Ofimática</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">article</span>Microsoft Word</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">table_chart</span>Microsoft Excel</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">slideshow</span>Microsoft PowerPoint</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">code</span>Herramientas de desarrollo</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">code</span>Visual Studio Code</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">account_tree</span>Git y GitHub</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">terminal</span>PowerShell y automatización mediante scripts</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">smart_toy</span>Python aplicado a la automatización</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="expandable-card cerrada" onclick="this.classList.toggle('cerrada')">
+                        <div class="card-header">
+                            <h3><span class="material-symbols-outlined tool-icon" aria-hidden="true">shield</span>Seguridad informática</h3>
+                            <button class="arrow-button"><span></span></button>
+                        </div>
+                        <div class="card-body">
+                            <hr>
+                            <ul class="tool-feature-list">
+                                <li><span class="material-symbols-outlined" aria-hidden="true">key</span>Buenas prácticas de copias, permisos y contraseñas</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">battery_charging_full</span>SAI, NAS y RAID</li>
+                                <li><span class="material-symbols-outlined" aria-hidden="true">bug_report</span>Diagnóstico de malware</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTOS -->
+                <h2>Proyectos</h2>
+                <div class="projects-category-heading">
+                    <h3>Desarrollo web</h3>
+                    <span class="projects-count" aria-label="3 proyectos">3</span>
+                    <hr>
+                </div>
+                <div class="projects-container">
+                    <a class="project-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto Pokémon en una pestaña nueva">
+                        <img src="img/pokemon.png" alt="Imagen del proyecto Pokémon" class="project-image">
+                        <h3>Pokémon</h3>
+                        <p>Desarrollé una página temática de Pokémon para practicar la maquetación con Flexbox.</p>
+                        <ul class="project-feature-list">
+                            <li>HTML & CSS</li>
+                            <li>Flexbox</li>
+                        </ul>
+                    </a>
+                    <a class="project-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto Plataforma educativa en una pestaña nueva">
+                        <img src="img/plataforma-educativa.png" alt="Imagen del proyecto Plataforma educativa" class="project-image">
+                        <h3>Plataforma educativa</h3>
+                        <p>Diseñé la interfaz en Figma y desarrollé la web aplicando principios de UI/UX.</p>
+                        <ul class="project-feature-list">
+                            <li>Figma</li>
+                            <li>UI/UX</li>
+                            <li>Variables CSS</li>
+                            <li>Media queries</li>
+                        </ul>
+                    </a>
+                    <a class="project-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto Mi portfolio personal en una pestaña nueva">
+                        <img src="img/portfolio-personal.png" alt="Imagen del proyecto Portfolio personal" class="project-image">
+                        <h3>Mi portfolio personal</h3>
+                        <p>Diseñé y desarrollé mi portfolio desde cero con HTML y CSS, utilizando IA como apoyo durante el proceso.</p>
+                        <ul class="project-feature-list">
+                            <li>HTML & CSS avanzado</li>
+                            <li>IA aplicada</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="projects-category-heading">
+                    <h3>Arduino</h3>
+                    <span class="projects-count" aria-label="1 proyecto">1</span>
+                    <hr>
+                </div>
+                    <a class="project-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto Roomba en una pestaña nueva">
+                        <img src="img/roomba.png" alt="Imagen del proyecto Roomba" class="project-image">
+                        <h3>Roomba</h3>
+                        <p>Construí y programé un robot móvil inspirado en una Roomba con Arduino.</p>
+                        <ul class="project-feature-list">
+                            <li>Arduino</li>
+                            <li>C++</li>
+                            <li>Tinkercad</li>
+                        </ul>
+                    </a>
+            </section>
+
+            <!-- CONÓCEME -->
+            <section id="about" class="tab-content">
+                <h2>Conóceme</h2>
+                <div class="panel">
+                    <p>Un poco más sobre mí, mis intereses y aficiones.</p>
+                </div>
+            </section>
+
+            <!-- GOALS -->
+            <section id="dreams" class="tab-content">
+                <h2>Goals</h2>
+                <div class="panel">
+                    <p>Lo que quieres conseguir y hacia dónde vas.</p>
+                </div>
+            </section>
+
+            <!-- CONTACTO -->
+            <section id="connect" class="tab-content">
+                <h2>Contacto</h2>
+                <div class="panel">
+                    <p>Tu email, LinkedIn, GitHub...</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
